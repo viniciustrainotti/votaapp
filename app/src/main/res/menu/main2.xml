@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/op_vereador"
+        android:orderInCategory="100"
+        android:title="Vota Vereador"
+        />
+
+    <item
+        android:id="@+id/op_prefeito"
+        android:orderInCategory="100"
+        android:title="Vota Prefeito"
+        />
+
+    <item
+        android:id="@+id/confimar_voto"
+        android:orderInCategory="100"
+        android:title="Confirmar Voto"
+        />
+
+    <item
+        android:id="@+id/sair"
+        android:orderInCategory="100"
+        android:title="Sair"
+        />
+</menu>
