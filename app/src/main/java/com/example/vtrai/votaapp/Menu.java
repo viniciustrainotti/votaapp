@@ -154,16 +154,16 @@ public class Menu extends AppCompatActivity implements Response.Listener, Respon
     public void onResponse(Object response) {
 
         Context context = getApplicationContext();
-        CharSequence text = "Votos computados com sucesso!";
+        CharSequence text = "Votos computados com sucesso! Por gentileza, utilize a opção Sair do Menu";
         int duration = Toast.LENGTH_SHORT;
 
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
 
-        Intent intent = new Intent(this, MainActivity.class);
+        /*Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("titulo_eleitor", titulo);
         startActivity(intent);
-        finish();
+        finish();*/
 
     }
 
