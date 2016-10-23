@@ -134,10 +134,6 @@ public class Op_prefeito extends AppCompatActivity implements Response.Listener,
                 it.putExtras(b);
                 startActivity(it);
                 finish();
-                /*
-                Toast.makeText(getApplicationContext(), "Escolhido o candidato "
-                        + prefeitos.get(position).getNome(), Toast.LENGTH_SHORT).show();*/
-
             }
         });
 

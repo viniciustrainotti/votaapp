@@ -139,18 +139,4 @@ public class Op_vereador extends AppCompatActivity implements Response.Listener,
         vereadores.add(new Vereador(id, nome, partido, imagem));
 
     }
-
-    public void cfn_vereador(View view)
-    {
-        Intent intent = new Intent(this, Menu.class);
-        intent.putExtra("titulo_eleitor", titulo);
-        intent.putExtra("voto_prefeito", voto_prefeito);
-        intent.putExtra("voto_vereador", vota);
-        intent.putExtra("nome_vereador", vereadores.get(vota-1).getNome());
-        intent.putExtra("nome_prefeito", nome_prefeito);
-        startActivity(intent);
-        finish();
-
-    }
-
 }
