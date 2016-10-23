@@ -16,7 +16,8 @@
         android:layout_height="200dp"
         android:id="@+id/imagem_prefeito_detalhe"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
 
     <TextView
         android:text=""
@@ -25,18 +26,18 @@
         android:layout_below="@+id/imagem_prefeito_detalhe"
         android:layout_marginTop="45dp"
         android:id="@+id/nome_prefeito_detalhe"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
 
 
     <TextView
         android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/nome_prefeito_detalhe"
-        android:layout_alignEnd="@+id/nome_prefeito_detalhe"
         android:layout_below="@+id/nome_prefeito_detalhe"
         android:id="@+id/partido_prefeito_detalhe"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
 
     <Button
         android:text="confirma"
@@ -46,6 +47,7 @@
         android:id="@+id/button2"
         android:layout_marginTop="52dp"
         android:layout_below="@+id/nome_prefeito_detalhe"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
 
 </RelativeLayout>

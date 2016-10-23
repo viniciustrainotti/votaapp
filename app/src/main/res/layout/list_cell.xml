@@ -3,7 +3,8 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="50dp" >
+    android:paddingTop="5dp"
+    >
 
     <ImageView
         android:id="@+id/prefeito_image"
@@ -15,17 +16,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="20dp">
+        android:paddingLeft="5dp"
+        >
 
         <TextView
             android:id="@+id/prefeito_name"
             android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_height="25dp" />
 
         <TextView
             android:id="@+id/prefeito_partido"
             android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+            android:layout_height="25dp" />
     </LinearLayout>
 
 </LinearLayout>
