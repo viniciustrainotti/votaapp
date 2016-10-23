@@ -30,8 +30,8 @@ public class Op_vereador extends AppCompatActivity implements Response.Listener,
     private View inflating_view;
     private int vota;
     private String titulo;
-    private int voto_prefeito;
-    private int voto_vereador;
+    private String voto_prefeito;
+    private String voto_vereador;
     private String nome_prefeito = "";
     private String nome_vereador = "";
     private Bundle b;
@@ -45,10 +45,8 @@ public class Op_vereador extends AppCompatActivity implements Response.Listener,
 
         b = getIntent().getExtras();
         titulo = b.getString("titulo_eleitor");
-        voto_prefeito = b.getInt("voto_prefeito");
-        voto_vereador = b.getInt("voto_vereador");
+        voto_prefeito = b.getString("voto_prefeito");
         nome_prefeito = b.getString("nome_prefeito");
-        nome_vereador = b.getString("nome_vereador");
 
 
         inflating_view = findViewById(R.id.activity_op_vereador);
@@ -119,9 +117,18 @@ public class Op_vereador extends AppCompatActivity implements Response.Listener,
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3)
             {
-                vota = position + 1;
-                Toast.makeText(getApplicationContext(), "Escolhido o candidato "
-                        + vereadores.get(position).getNome(), Toast.LENGTH_SHORT).show();
+                Vereador vereador = vereadores.get(position);
+                Bundle b = new Bundle();
+                b.putSerializable("vereador", vereador);
+
+                Intent it = new Intent(getApplicationContext(), DetalhesVereador.class);
+                it.putExtra("titulo_eleitor", titulo);
+                it.putExtra("voto_prefeito", voto_prefeito);
+                it.putExtra("nome_prefeito", nome_prefeito);
+                it.putExtras(b);
+                startActivity(it);
+                finish();
+
             }
         });
 

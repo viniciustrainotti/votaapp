@@ -1,10 +1,12 @@
 package com.example.vtrai.votaapp.Entidades;
 
+import java.io.Serializable;
+
 /**
  * Created by vtrai on 08/10/2016.
  */
 
-public class Vereador {
+public class Vereador implements Serializable{
 
     private final String id;
     private final String nome;

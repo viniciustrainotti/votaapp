@@ -19,7 +19,9 @@
         </activity>
         <activity android:name=".Menu" />
         <activity android:name=".Op_prefeito" />
-        <activity android:name=".Op_vereador"></activity>
+        <activity android:name=".Op_vereador" />
+        <activity android:name=".DetalhesPrefeito" />
+        <activity android:name=".DetalhesVereador"></activity>
     </application>
 
 </manifest>

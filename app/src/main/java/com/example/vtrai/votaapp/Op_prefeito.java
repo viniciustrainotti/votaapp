@@ -45,10 +45,9 @@ public class Op_prefeito extends AppCompatActivity implements Response.Listener,
         b = new Bundle();
 
         b = getIntent().getExtras();
+
         titulo = b.getString("titulo_eleitor");
-        voto_prefeito = b.getInt("voto_prefeito");
         voto_vereador = b.getInt("voto_vereador");
-        nome_prefeito = b.getString("nome_prefeito");
         nome_vereador = b.getString("nome_vereador");
 
 
@@ -123,9 +122,22 @@ public class Op_prefeito extends AppCompatActivity implements Response.Listener,
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3)
             {
-                vota = position + 1;
+
+                Prefeito prefeito = prefeitos.get(position);
+                Bundle b = new Bundle();
+                b.putSerializable("prefeito", prefeito);
+
+                Intent it = new Intent(getApplicationContext(), DetalhesPrefeito.class);
+                it.putExtra("titulo_eleitor", titulo);
+                it.putExtra("voto_vereador", voto_vereador);
+                it.putExtra("nome_vereador", nome_vereador);
+                it.putExtras(b);
+                startActivity(it);
+                finish();
+                /*
                 Toast.makeText(getApplicationContext(), "Escolhido o candidato "
-                        + prefeitos.get(position).getNome(), Toast.LENGTH_SHORT).show();
+                        + prefeitos.get(position).getNome(), Toast.LENGTH_SHORT).show();*/
+
             }
         });
 
@@ -136,18 +148,4 @@ public class Op_prefeito extends AppCompatActivity implements Response.Listener,
         prefeitos.add(new Prefeito(id, nome, partido, imagem));
 
     }
-
-    public void cfn_prefeito(View view)
-    {
-        Intent intent = new Intent(this, Menu.class);
-        intent.putExtra("titulo_eleitor", titulo);
-        intent.putExtra("voto_prefeito", vota);
-        intent.putExtra("voto_vereador", voto_vereador);
-        intent.putExtra("nome_vereador", nome_vereador);
-        intent.putExtra("nome_prefeito", prefeitos.get(vota-1).getNome());
-        startActivity(intent);
-        finish();
-
-    }
-
 }

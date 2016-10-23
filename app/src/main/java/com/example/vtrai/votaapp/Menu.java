@@ -97,8 +97,6 @@ public class Menu extends AppCompatActivity implements Response.Listener, Respon
                 Intent intent = new Intent(this, Op_vereador.class);
                 intent.putExtra("titulo_eleitor", titulo);
                 intent.putExtra("voto_prefeito", voto_prefeito);
-                intent.putExtra("voto_vereador", voto_vereador);
-                intent.putExtra("nome_vereador", nome_vereador);
                 intent.putExtra("nome_prefeito", nome_prefeito);
                 startActivity(intent);
                 finish();
@@ -121,11 +119,8 @@ public class Menu extends AppCompatActivity implements Response.Listener, Respon
 
                 Intent intent = new Intent(this, Op_prefeito.class);
                 intent.putExtra("titulo_eleitor", titulo);
-                intent.putExtra("voto_prefeito", voto_prefeito);
                 intent.putExtra("voto_vereador", voto_vereador);
                 intent.putExtra("nome_vereador", nome_vereador);
-                intent.putExtra("nome_prefeito", nome_prefeito);
-
                 startActivity(intent);
                 finish();
 
