@@ -160,6 +160,7 @@ public class Menu extends AppCompatActivity implements Response.Listener, Respon
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
 
+        //Ao computar os votos não é necessário voltar a Activity de login
         /*Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("titulo_eleitor", titulo);
         startActivity(intent);

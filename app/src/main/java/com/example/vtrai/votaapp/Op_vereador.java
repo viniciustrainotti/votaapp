@@ -30,7 +30,7 @@ public class Op_vereador extends AppCompatActivity implements Response.Listener,
     private View inflating_view;
     private int vota;
     private String titulo;
-    private String voto_prefeito;
+    private int voto_prefeito;
     private String voto_vereador;
     private String nome_prefeito = "";
     private String nome_vereador = "";
@@ -45,7 +45,7 @@ public class Op_vereador extends AppCompatActivity implements Response.Listener,
 
         b = getIntent().getExtras();
         titulo = b.getString("titulo_eleitor");
-        voto_prefeito = b.getString("voto_prefeito");
+        voto_prefeito = b.getInt("voto_prefeito");
         nome_prefeito = b.getString("nome_prefeito");
 
 
