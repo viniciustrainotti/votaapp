@@ -96,11 +96,6 @@ public class ConfirmarVoto extends AppCompatActivity implements Response.Listene
     @Override
     public void onResponse(Object response) {
 
-       /* Intent intent = new Intent(this, Menu.class);
-        intent.putExtra("titulo_eleitor", titulo);
-        startActivity(intent);
-        finish();*/
-
         Intent it = new Intent(this, Menu.class);
         b.putString("titulo_eleitor", titulo);
 
