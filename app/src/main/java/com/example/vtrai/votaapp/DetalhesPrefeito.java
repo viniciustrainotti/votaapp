@@ -1,6 +1,7 @@
 package com.example.vtrai.votaapp;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,7 @@ public class DetalhesPrefeito extends AppCompatActivity {
     private String nome_vereador = "";
 
     private Bundle b;
+    private MediaPlayer test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,9 @@ public class DetalhesPrefeito extends AppCompatActivity {
     }
     public void cfn_prefeito(View view)
     {
+
+        test = new MediaPlayer().create(this, R.raw.somurna);
+        test.start();
 
         b = new Bundle();
         b.putSerializable("prefeito", prefeito);
