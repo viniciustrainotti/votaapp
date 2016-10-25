@@ -16,9 +16,8 @@ import com.android.volley.VolleyError;
 
 
 
-public class Menu extends AppCompatActivity implements Response.Listener, Response.ErrorListener {
+public class Menu extends AppCompatActivity{
 
-    public static final String REQUEST_TAG = "UserAutentication";
     private TextView teste;
     private Bundle b = null;
     private String titulo;
@@ -27,8 +26,6 @@ public class Menu extends AppCompatActivity implements Response.Listener, Respon
     private int voto_vereador = 0;
     private String nome_prefeito = null;
     private String nome_vereador = null;
-    protected final String url = "http://vota.mybluemix.net/api/votar";
-    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,15 +137,5 @@ public class Menu extends AppCompatActivity implements Response.Listener, Respon
 
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onErrorResponse(VolleyError error) {
-
-    }
-
-    public void onResponse(Object response) {
-
-
     }
 }
