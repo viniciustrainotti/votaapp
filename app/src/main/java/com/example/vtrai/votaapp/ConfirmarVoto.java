@@ -96,6 +96,8 @@ public class ConfirmarVoto extends AppCompatActivity implements Response.Listene
     @Override
     public void onResponse(Object response) {
 
+        test.start();
+        test.seekTo(100);
         Intent it = new Intent(this, Menu.class);
         b.putString("titulo_eleitor", titulo);
 
@@ -165,7 +167,6 @@ public class ConfirmarVoto extends AppCompatActivity implements Response.Listene
         builder.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface arg0, int arg1) {
                 //.makeText(Menu.this, "positivo=" + arg1, Toast.LENGTH_SHORT).show();
-                test.start();
                 cfn_todos();
 
             }
