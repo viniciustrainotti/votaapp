@@ -56,6 +56,7 @@ public class DetalhesPrefeito extends AppCompatActivity {
 
         test = new MediaPlayer().create(this, R.raw.somurna);
         test.start();
+        test.seekTo(1000);
 
         b = new Bundle();
         b.putSerializable("prefeito", prefeito);

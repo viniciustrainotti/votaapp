@@ -78,8 +78,8 @@ public class ConfirmarVoto extends AppCompatActivity implements Response.Listene
 
         }
 
-        // Erro ao processar o voto
-        if (error.networkResponse.statusCode == 422) {
+        // Erro ao processar o voto ou dominio estiver fora no momento
+        if (error.networkResponse.statusCode == 422 || error.networkResponse.statusCode == 500) {
             CharSequence text = "Tente novamente";
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
@@ -97,7 +97,7 @@ public class ConfirmarVoto extends AppCompatActivity implements Response.Listene
     public void onResponse(Object response) {
 
         test.start();
-        test.seekTo(100);
+        test.seekTo(1000);
         Intent it = new Intent(this, Menu.class);
         b.putString("titulo_eleitor", titulo);
 
